@@ -1,0 +1,21 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Output folders
+bin/
+dist/
+build/
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+
+# Go workspace file (if it's local-only)
+go.work
+go.work.sum
