@@ -12,13 +12,14 @@ type User struct {
 
 // Fields of the User.
 func (User) Fields() []ent.Field {
-	return nil
+	return []ent.Field{
+		field.String("username").
+			Unique(),
+	}
 }
 
 // Edges of the User.
-func (User) Edges() []ent.Field {
-	return []ent.Field{
-		field.String("username").
-			Default("unknown"),
-	}
+func (User) Edges() []ent.Edge {
+	return nil
+
 }

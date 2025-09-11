@@ -22,9 +22,17 @@ func (Order) Fields() []ent.Field {
 			Default(0),
 		field.Int("quantity").
 			Default(0),
-		field.Enum("order_type").
+		field.Enum("side").
 			Values("BUY", "SELL"),
-		field.Enum("order_status").
+		field.Enum("type").
+			Values("MARKET", "LIMIT"),
+		field.Int("amount").
+			Default(0),
+		field.Int("filled_amount").
+			Default(0),
+		field.Int("remaining_amount").
+			Default(0),
+		field.Enum("status").
 			Values("PENDING", "FILLED", "CANCELLED"),
 		field.Time("created_at").
 			Default(time.Now),
